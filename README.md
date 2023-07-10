@@ -6,3 +6,10 @@
 ###     wsl --install
 ## 3. upon finishing install, setup (username and password) and restart the machine update the the library using the following command:
 ###     sudo apt update && sudo apt upgrade
+## 4. install windows subsystem for linux using the following command:
+###     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+###    Note: when performing the above command, if encounter an error "curl: (6) could not resolve host: sh.rustup.rs", try the following command to restart wsl and see if it resolves the problem (worked on win 11):
+####    wsl --shutdown
+####    wsl
+#
+#
