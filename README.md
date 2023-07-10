@@ -12,4 +12,6 @@
 ####    wsl --shutdown
 ####    wsl
 #
-#
+## 5. after installing the subsystem, need to restart wsl for the subsystem and updates to take into effects, use the following command:
+###     exit  or wsl --shutdown
+###     wsl
