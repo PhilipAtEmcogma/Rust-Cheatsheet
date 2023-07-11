@@ -1,6 +1,6 @@
 # Note: this cheatsheet is created on July 2023 for a course I did learning to use Rust to build on Solana network.  Until July 2023, Solana only works on Linux and iOS, and not on Windows. 
 #
-# Thus, to work on Solana on a Windows machine you need to do the followings:
+# Thus, to install, setup and get Solana to on a Windows machine you need to do the followings:
 ## 1. open powershell as administrator
 ## 2. install ubuntu using the following command:
 ###     wsl --install
@@ -15,3 +15,11 @@
 ## 5. after installing the subsystem, need to restart wsl for the subsystem and updates to take into effects, use the following command:
 ###     exit  or wsl --shutdown
 ###     wsl
+#
+## 6. Next install Solana CLI in the window machine, two useful official link on how to install it can be found in the following:
+### a: https://solana.com/developers
+### b: https://solana.com/developers/guides/setup-local-development
+##  Starting the linux vm (e.g. ubuntu) using the following command:
+### wsl
+## install the Solana CLI tool suite using the folllowing command:
+### sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
