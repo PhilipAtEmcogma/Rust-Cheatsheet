@@ -1,0 +1,11 @@
+keyprase: test
+public key: CvozidoF8XDtvqsqEYi7PYnwYU47rpbtQqYjAQMkVjm1 
+
+solana token created
+token address:  8K8Pb3mPisFQwiQwe42WqWZvNoUX2Dh8b7PZc9NDyXzT
+decimal: 9
+signature: 2EtyXSdLzJzFzbhrWqRVP7nkDESfNUsaxwrfaBGvLVhU2vZheDwetaxVsZRDkwSRDbJYtxk1J7sKXoWC9ASW7Syq
+
+Account to hold the created token
+address: AMEyd5g6eFBp5vR9zHPmcRviyU5sSUJBvfncopEER1Ki
+signature: 4gTHRaCfYKvouXFfYrk1MSoF3717YCaBbvAkVpB1FwDsZDL7FNQREnFUXPYe4Gu19Co8YuEy7JX4rTG9WtFB3Jb3

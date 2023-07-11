@@ -47,5 +47,38 @@
 #
 ## Alternatively we could set a simple file system wallet, set it as default wallet and sent the devnet Sol there by the following the steps in the link below:
 ###  https://solana.com/developers/guides/setup-local-development#windows-users-only
-
-
+#
+# --------------------------------------------------------------------------------------
+# To get publickey of a wallet use the following command in wsl:
+## solana-keygen pubkey
+# To check the balance of wallet use the following command (note change name of network, for different network):
+## solana balance --url devent
+# --------------------------------------------------------------------------------------
+# To create a token do the following steps:
+## when creating the token on the mainnet, change devnet to the url of the mainnet
+# 1. To install token cli, run the following command:
+##  cargo install spl-token-cli
+# 2. Then to create the token, run the following:
+##  spl-token creaate-token --url devnet
+# 3. Create an account to hold the tokens before minting, use the following:
+## spl-token create-account <TOKEN_ADDRESS> --url devnet
+### note: TOKEN_ADDRESS is the address of the created token in step 2 above, and the returned id is the token account address
+# 4. Minting the token, use the following code:
+## spl-token mint <TOKEN_ADDRESS> <NUMBER> --url devnet
+### note: TOKEN_ADDRESS is the address of the created token in step 2, NUMBER is how many token we want to mint.
+## After minting the token we can check the balance using the following:
+## spl-token balance <TOKEN_ADDRESS> --url devnet
+## To Check the circulating supply of the token, after minting use the following:
+## spl-token supply <TOKEN_ADDRESS> --url devnet
+# 5. To put a cap of circulating supply, thus creating a infinite supply (i.e. over dialuting the supply). Renounce and disable the ability to mint tokens using the folllowing:
+## spl-token authorize <TOKEN_ADDRESS> mint --disable --url devent
+#
+# Tokens can be burnt (only our own tokens can be burned), by using the following:
+## spl-token burn <ACCOUNT_ADDRESS> <NUMBER> --url devnet
+### Note: ACCOUNT_ADDRESS is the address created in step 3 to hold the tokens, NUMBER is the amount we want to burn
+#
+# --------------------------------------------------------------------------------------
+#
+# To transfer the newly minted token from developer account to another wallet can use the following code:
+## spl-token transfer <SOURCE_TOKEN_ADDRESS> <AMOUNT> <TARGET_TOKEN_ADDRESS> --url devnet --fund-recipient
+### Note: SOURCE_TOKEN_ADDRESS is the token address, TARGET_TOKEN_ADDRESS is the wallet address we want to sent the token to, AMOUNT is the amount of token we want to sent, --fund-recipient is use incase the recipient wallet don't have enough sol to cover for the gas fee, thus the sender pays for it
