@@ -136,3 +136,20 @@
 ##  solana program deploy dist/program/helloworld.so
 # 15. Run the program by using the following:
 ## npm start
+#
+# ------------------------------------------------------------------------------------------------------------------
+#
+# To display Logs, implement in the program
+# 1. Start a new wsl terminal
+# 2. Start the progam in the terminal that didn't host the logger, but using the following:
+##  npm start
+#
+# -------------------------------------------------------------------------------------------------------------------
+#
+# Reminder to whenever a code is change, we need to re-build and re-dploy the smart contracts.
+# Use the following code to do so:
+## npm run <DIRECTORY_OF_PROJECT>
+### e.g. 'npm run build:program-rust', where this command build the program-rust file under the src folder (where changes are made)
+## solana program deploy <DIRECTORY_OF_THE_SMART_CONTRACT>
+### e.g. 'solana program deploy dist/program/helloworld.so' , where we want to redeploy the helloworld smart contrct, and it is located at the directory dist/program/helloworld.so
+# After rebuilding and redeploying the smart contract we can use 'npm start' to test the functinoality
