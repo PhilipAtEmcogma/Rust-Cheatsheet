@@ -49,11 +49,14 @@
 ###  https://solana.com/developers/guides/setup-local-development#windows-users-only
 #
 # --------------------------------------------------------------------------------------
+#
 # To get publickey of a wallet use the following command in wsl:
 ## solana-keygen pubkey
 # To check the balance of wallet use the following command (note change name of network, for different network):
 ## solana balance --url devent
+#
 # --------------------------------------------------------------------------------------
+#
 # To create a token do the following steps:
 ## when creating the token on the mainnet, change devnet to the url of the mainnet
 # 1. To install token cli, run the following command:
@@ -81,4 +84,55 @@
 #
 # To transfer the newly minted token from developer account to another wallet can use the following code:
 ## spl-token transfer <SOURCE_TOKEN_ADDRESS> <AMOUNT> <TARGET_TOKEN_ADDRESS> --url devnet --fund-recipient
-### Note: SOURCE_TOKEN_ADDRESS is the token address, TARGET_TOKEN_ADDRESS is the wallet address we want to sent the token to, AMOUNT is the amount of token we want to sent, --fund-recipient is use incase the recipient wallet don't have enough sol to cover for the gas fee, thus the sender pays for it
+### Note: SOURCE_TOKEN_ADDRESS is the token address, TARGET_TOKEN_ADDRESS is the wallet address we want to sent the token to, AMOUNT is the amount of token we want to sent, --fund-recipient is use incase the recipient wallet don't have enough sol to cover for the gas fee, thus the sender pays for it.
+#
+# --------------------------------------------------------------------------------------
+# Deploying a Solana Smart Contract, by deploying an example project
+# 
+# Solana hello-world example github:
+## https://github.com/solana-labs/example-helloworld
+#
+# On top of installing WSL  (for windows), Node.js is also required to develop smart contract in Solana.  The offical guid can be found below:
+## https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+# To do so, follow the following steps
+# 1. Start Ubuntu command line by using the following:
+##  wsl
+# 2. Install cURL by using the wolling:
+##  sudo apt-get install curl
+# 3. Install NVM, by using the following:
+##  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+# 4. Verify NVM by using the following (correct respond should be 'NVM'):
+## command -v nvm
+### NOTE: if the above command does not respond even install is successful, try restarting wsl and try again.
+# 5. Install node and lts by using the following:
+## nvm install node
+## nvm install --lts
+# 6. Install Rust (official webpapge: https://rustup.rs/), fun the following:
+##  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+### default installation (option 1) should be fine for many cases.
+# 7. Configure the CLI, by using the following (for Windows):
+##  solana config set --url localhost
+# 8. Generate a new key pair using:
+##  solana-keygen new
+### NOTE: use 'solana-keygen new --force' if a keypair had been created previously
+# 9. Start local Solana cluster by using the following:
+##  solana-test-validator
+### NOTE: if the following error occurs
+#### Unable to connect to validator: Client error: test-ledger/admin.rpc does not exist 
+### that means we need to change the ubuntu director to root and then reinitialise, thus simply do (pay attention there a space between cd and ~):
+#### cd ~
+# 10. Leave the validator running on the background, and open a new wsl to build the on-chain program.
+# 11. Clone the Solana github example repo from and using the following in a new wsl:
+##  https://github.com/solana-labs/example-helloworld/
+##  git clone https://github.com/solana-labs/example-helloworld.git
+# 12. Go to the helloworld repo and install everything, using the following:
+## cd example-helloworld/
+## npm install
+# 13. Build the on-chain program by using:
+## npm run build:program-rust
+### NOTE: incase there's a 'cc linker' error when building, which can be solve by installing the build essential and run the build program command again.  Essential toolchain can be install by following (for ubuntu):
+####    sudo apt install build-essential
+# 14. Deploy the program to the validator using the following:
+##  solana program deploy dist/program/helloworld.so
+# 15. Run the program by using the following:
+## npm start

@@ -9,3 +9,12 @@ signature: 2EtyXSdLzJzFzbhrWqRVP7nkDESfNUsaxwrfaBGvLVhU2vZheDwetaxVsZRDkwSRDbJYt
 Account to hold the created token
 address: AMEyd5g6eFBp5vR9zHPmcRviyU5sSUJBvfncopEER1Ki
 signature: 4gTHRaCfYKvouXFfYrk1MSoF3717YCaBbvAkVpB1FwDsZDL7FNQREnFUXPYe4Gu19Co8YuEy7JX4rTG9WtFB3Jb3
+
+
+
+------------------
+solana keypair
+public key: 48tWcpCBbFJy92x2uPt9ouGmmLoomWe9W6sRLQ3akMQv
+
+program ID for the example-helloworld
+DdVZ34kqV5VGNUZDLQ2ptyEK1VztLHvJKfj4JAzJ4iZo
