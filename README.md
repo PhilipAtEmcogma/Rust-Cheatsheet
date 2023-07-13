@@ -27,8 +27,10 @@
 #
 # When testing dapp and/or smart contracts on local machine we need to have a local test validator setup on a separate command line window, and leave it running for the entire duration, official documentation on how to set it up can be found at the following:
 ## https://solana.com/developers/guides/setup-local-development#windows-users-only
-# command to use to setup test validator:
+# command to use to setup / run test validator:
 ## solana-test-validator
+# NOTE: TO START THE TEST VALIDATOR, WSL MUST BE IN THE ROOT FOLDER! USE THE FOLLOWING TO GET TO ROOT:
+# cd ~
 # after running the test validator, configure Solana CLI to use localhose validator for all future terminal commands, using the following command:
 ## solana config set --url localhost
 # Solana CLI configuration settings can be review using:
@@ -153,3 +155,7 @@
 ## solana program deploy <DIRECTORY_OF_THE_SMART_CONTRACT>
 ### e.g. 'solana program deploy dist/program/helloworld.so' , where we want to redeploy the helloworld smart contrct, and it is located at the directory dist/program/helloworld.so
 # After rebuilding and redeploying the smart contract we can use 'npm start' to test the functinoality
+#
+# -------------------------------------------------------------------------------------
+#
+#
