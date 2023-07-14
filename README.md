@@ -158,4 +158,11 @@
 #
 # -------------------------------------------------------------------------------------
 #
-#
+#   When writing the test cases its not a good practice to just write and run it at the end.  Because throughout stages of the project, we will have different expectation and expected outcome and data structures at different stages.
+# It is better to have a TEST-DRIVEN DEVELOPMENT, that is:
+# First write the test cases and specify the data structure we need to use in the test case (rather than first defing the data structure use in the implementation itself)
+# Because if we dive straight into the implementation fist instead of having a Test-Driven Development, it's likely to have incorproated some form of biases and shortcuts into the implementation.
+# These biases and shortcuts might work while development is in process or when testing a particular function(s), but it might have bugs and faults in it, which only manifest and affect when the whole implementation is in process.
+# Therefore best implementation for Test-Driven Development and to remove biases, are:
+# if working solo or small team, write the test case first and test the implementation line-by-line on the go.
+# if working in a team, have someone else write the test case
