@@ -33,7 +33,7 @@
 # command to use to setup / run test validator:
 ## solana-test-validator
 # NOTE: TO START THE TEST VALIDATOR, WSL MUST BE IN THE ROOT FOLDER! USE THE FOLLOWING TO GET TO ROOT:
-# cd ~
+## cd ~
 # after running the test validator, configure Solana CLI to use localhose validator for all future terminal commands, using the following command:
 ## solana config set --url localhost
 # Solana CLI configuration settings can be review using:
@@ -78,7 +78,7 @@
 ## spl-token balance <TOKEN_ADDRESS> --url devnet
 ## To Check the circulating supply of the token, after minting use the following:
 ## spl-token supply <TOKEN_ADDRESS> --url devnet
-# 5. To put a cap of circulating supply, thus creating a infinite supply (i.e. over dialuting the supply). Renounce and disable the ability to mint tokens using the folllowing:
+# 5. To put a cap of circulating supply, thus preveting misuses such as creating a infinite supply (i.e. over dialuting the supply). Renounce and disable the ability to mint tokens using the folllowing:
 ## spl-token authorize <TOKEN_ADDRESS> mint --disable --url devent
 #
 # Tokens can be burnt (only our own tokens can be burned), by using the following:
