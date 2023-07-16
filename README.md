@@ -1,18 +1,21 @@
-# Note: this cheatsheet is created on July 2023 for a course I did learning to use Rust to build on Solana network.  Until July 2023, Solana only works on Linux and iOS, and not on Windows. 
-#
-# Thus, to install, setup and get Solana to on a Windows machine you need to do the followings:
-## 1. open powershell as administrator
-## 2. install ubuntu using the following command:
+# Note: This cheatsheet is last updated on July 2023 for building Smart Contract using Rust on Solana network.  Until July 2023, Solana only works on Linux and iOS, and not on Windows. 
+#       I will aperiodically update it whenever I found something new and interesting in coding Smart Contract for the Solana network.
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#  
+# The following, are guided steps for installing and setup Rust and getting it to interact with Solana blockchain on a Windows machine.
+# NOTE: the steps involve installing Linux subsystem.
+## 1. Open powershell as administrator
+## 2. Install ubuntu using the following command:
 ###     wsl --install
-## 3. upon finishing install, setup (username and password) and restart the machine update the the library using the following command:
+## 3. Upon finishing install, setup (username and password) and restart the machine, update and upgrade the the libraries using the following command:
 ###     sudo apt update && sudo apt upgrade
-## 4. install windows subsystem for linux using the following command:
+## 4. Install windows subsystem for linux using the following command:
 ###     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ###    Note: when performing the above command, if encounter an error "curl: (6) could not resolve host: sh.rustup.rs", try the following command to restart wsl and see if it resolves the problem (worked on win 11):
 ####    wsl --shutdown
 ####    wsl
 #
-## 5. after installing the subsystem, need to restart wsl for the subsystem and updates to take into effects, use the following command:
+## 5. After installing the subsystem, need to restart wsl for the subsystem and updates to take into effects, use the following command:
 ###     exit  or wsl --shutdown
 ###     wsl
 #
@@ -21,7 +24,7 @@
 ### b: https://solana.com/developers/guides/setup-local-development
 ##  Starting the linux vm (e.g. ubuntu) using the following command:
 ### wsl
-## install the Solana CLI tool suite using the folllowing command:
+## Install the Solana CLI tool suite using the folllowing command:
 ### sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
 #
 #
